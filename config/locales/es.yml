@@ -1,0 +1,20 @@
+es:
+  landing:
+    hero:
+      headline: "Entrenamiento de boxeo, reinventado"
+      description: "Ponte en forma, mejora tus habilidades y mantente motivado con rutinas y planes para todos."
+      cta_ios: "Próximamente en iOS"
+      cta_android: "Próximamente en Android"
+    features:
+      title: "¿Por qué entrenar con nosotros?"
+      items:
+        - "Mejora tus habilidades de boxeo con ejercicios guiados"
+        - "Quema calorías y baja de peso con cardio de boxeo"
+        - "Entrena con o sin equipo"
+        - "Fortalece tu cuerpo con calistenia"
+        - "Sigue rutinas y planes estructurados"
+        - "Haz seguimiento a tu racha y mantente motivado"
+    final_cta:
+      title: "Sé el primero en enterarte"
+      description: "Regístrate para recibir novedades sobre nuestro lanzamiento."
+      cta: "Recibir novedades"
