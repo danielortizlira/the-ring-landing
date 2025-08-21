@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-brand-red-50: #fff5f6;
+  --color-brand-red-100: #feeff1;
+  --color-brand-red-200: #fcdce1;
+  --color-brand-red-300: #f7b3bf;
+  --color-brand-red-400: #ee8598;
+  --color-brand-red-500: #e15a72;
+  --color-brand-red-600: #c41e3d;
+  --color-brand-red-700: #a51933;
+  --color-brand-red-800: #851429;
+  --color-brand-red-900: #670f1f;
+
+  --color-brand-slate-50: #f2f3f5;
+  --color-brand-slate-100: #e4e6eb;
+  --color-brand-slate-200: #c8cdd9;
+  --color-brand-slate-300: #a0a9bf;
+  --color-brand-slate-400: #7885a3;
+  --color-brand-slate-500: #596580;
+  --color-brand-slate-600: #3a445d;
+  --color-brand-slate-700: #2f384f;
+  --color-brand-slate-800: #242c3e;
+  --color-brand-slate-900: #1a202c;
+
+  --font-sans: "Inter var", system-ui, sans-serif;
+}
