@@ -1,49 +1,5 @@
 <div class="bg-white text-gray-900">
-  <!-- Hero Section -->
-  <section
-    class="
-      relative min-h-screen flex flex-col items-center justify-center text-center px-6
-      bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black
-    "
-  >
-    <img
-      src="<%= asset_path('logo.svg') %>"
-      alt="App Logo"
-      class="h-40 mb-8 drop-shadow-md"
-    >
-
-    <h1
-      class="
-        text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900
-        dark:text-white
-      "
-    >
-      <%= t("landing.hero.headline") %>
-    </h1>
-
-    <p
-      class="
-        text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl leading-relaxed
-      "
-    >
-      <%= t("landing.hero.description") %>
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-4">
-      <!-- Google Play Badge -->
-      <a href="#" class="hover:scale-105 transition-transform">
-        <%= google_play_pre_register_badge_tag %>
-      </a>
-      <!-- App Store Badge -->
-      <a href="#" class="hover:scale-105 transition-transform">
-        <%= app_store_pre_order_badge_tag %>
-      </a>
-    </div>
-    <!-- Coming soon tag -->
-    <p class="mt-6 text-sm text-gray-500 dark:text-gray-400 italic">
-      <%= t("landing.hero.coming_soon") %>
-    </p>
-  </section>
+  <%= render("hero") %>
   <!-- Features Section -->
   <section class="py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto text-center px-6">

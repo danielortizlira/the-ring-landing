@@ -5,6 +5,14 @@ es:
       description: "¡Entra al Ring! Sumérgete en el mundo del boxeo con rutinas innovadoras y planes que te llevarán al límite. Fuerza, habilidad y motivación, todo en un solo lugar."
       cta_ios: "Próximamente en iOS"
       cta_android: "Próximamente en Android"
+      tags:
+        boxing: "Boxeo"
+        tabata: "Tabata"
+        hiit: "HIIT"
+        core: "Core"
+        jumprope: "Salto de Cuerda"
+      coming_soon_headline: "PRÓXIMAMENTE"
+      coming_soon_description: "Prepárate para transformar tu entrenamiento."
     features:
       title: "¿Por qué entrenar con nosotros?"
       items:
