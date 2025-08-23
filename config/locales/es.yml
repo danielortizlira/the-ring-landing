@@ -1,8 +1,8 @@
 es:
   landing:
     hero:
-      headline: "Entrenamiento de boxeo, reinventado"
-      description: "Ponte en forma, mejora tus habilidades y mantente motivado con rutinas y planes para todos."
+      headline: " ¿Estás Listo para el Desafío?"
+      description: "¡Entra al Ring! Sumérgete en el mundo del boxeo con rutinas innovadoras y planes que te llevarán al límite. Fuerza, habilidad y motivación, todo en un solo lugar."
       cta_ios: "Próximamente en iOS"
       cta_android: "Próximamente en Android"
     features:
