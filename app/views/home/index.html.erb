@@ -1,40 +1,6 @@
 <div class="bg-white text-gray-900">
   <%= render("hero") %>
-  <!-- Features Section -->
-  <section class="py-24 bg-gray-50">
-    <div class="max-w-5xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold mb-16"><%= t("landing.features.title") %></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-        <%# Assuming your t("landing.features.items") returns an array of hashes like { title: "...", description: "..." } %>
-        <% t("landing.features.items").each do |feature| %>
-          <div class="p-8 bg-white rounded-2xl border border-gray-200">
-            <!-- Add an SVG icon here -->
-            <div
-              class="
-                bg-brand-red-100 text-brand-red-600 rounded-full h-12 w-12 flex items-center
-                justify-center mb-5
-              "
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              ><path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2"><%= feature[:title] %></h3>
-            <p class="text-gray-600"><%= feature[:description] %></p>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
+  <%= render("features") %>
   <!-- Final CTA --> <!-- Final CTA -->
   <section class="py-24 text-center px-6 bg-brand-slate-800 text-white">
     <h2 class="text-4xl font-bold mb-4"><%= t("landing.final_cta.title") %></h2>

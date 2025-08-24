@@ -42,21 +42,43 @@ en:
         jumprope: "Jump Rope"
       coming_soon_headline: "COMING SOON"
       coming_soon_description: "Get ready to transform your training."
+
     features:
-      title: "Why train with us?"
-      items:
-        - title: "Guided Drills"
-          description: "Improve your boxing skills with guided drills designed by experts."
-        - title: "Cardio Boxing"
-          description: "Burn calories and lose weight with high-energy cardio boxing routines."
-        - title: "Flexible Training"
-          description: "Train anywhere, anytime, with or without equipment."
-        - title: "Strength Building"
-          description: "Boost your strength and power with integrated calisthenics exercises."
-        - title: "Structured Plans"
-          description: "Follow structured workouts and plans to achieve your fitness goals faster."
-        - title: "Stay Motivated"
-          description: "Track your streak, set new records, and stay motivated on your journey."
+      main_title: "Designed for Every Fighting Style"
+      main_subtitle: "Whether you're aiming to be a champion or just get in champion shape, we have the perfect plan for you."
+
+      boxers_block:
+        title: "For the Dedicated Boxer"
+        items:
+          technique:
+            title: "Pro-Level Technique"
+            description: "Perfect every punch with drills and exercises designed by expert boxers to refine your technique and precision."
+          endurance:
+            title: "Endurance for Every Round"
+            description: "Build your stamina with cardio and burnout workouts that prepare you to maintain intensity until the final bell."
+          power:
+            title: "Impactful Power"
+            description: "Develop explosive strength in your core and legs with integrated calisthenics, crucial for more devastating punches."
+          plans:
+            title: "Smart Fight Plans"
+            description: "Follow structured programs that target your weaknesses and enhance your strengths for measurable progress."
+
+      fitness_block:
+        title: "For the Fitness Warrior"
+        items:
+          burn:
+            title: "Burn Calories, Release Stress"
+            description: "Get in shape with high-energy Cardio Boxing routines. The most fun and effective way to lose weight and sculpt your body."
+          anywhere:
+            title: "Train Anywhere, On Your Terms"
+            description: "Your boxing gym in your pocket. Access hundreds of workouts from your phone, with or without equipment."
+          strength:
+            title: "Functional Strength & Iron Core"
+            description: "Build a solid foundation with strength exercises that improve your posture, balance, and make you stronger for everyday life."
+          motivation:
+            title: "Motivation That Never Quits"
+            description: "Track your progress, complete challenges, and keep your streak alive. Turn every workout into a personal victory."
+
     final_cta:
       title: "Be the first to know"
       description: "Sign up to get notified when we launch."
