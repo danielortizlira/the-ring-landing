@@ -51,6 +51,7 @@ es:
             description: "Sigue tu progreso, completa desafíos y mantén tu racha. Convierte cada entrenamiento en una victoria personal."
 
     final_cta:
-      title: "Sé el primero en enterarte"
-      description: "Regístrate para recibir novedades sobre nuestro lanzamiento."
-      cta: "Recibir novedades"
+      title: "¿Listo para tu Primer Round?"
+      description: "Deja tu correo y sé el primero en saber cuándo lanzamos. Prepárate para entrenar diferente."
+      placeholder: "Tu correo electrónico"
+      cta: "Notifíquenme"

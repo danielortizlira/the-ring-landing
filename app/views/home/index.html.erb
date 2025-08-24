@@ -1,28 +1,5 @@
 <div class="bg-white text-gray-900">
   <%= render("hero") %>
   <%= render("features") %>
-  <!-- Final CTA --> <!-- Final CTA -->
-  <section class="py-24 text-center px-6 bg-brand-slate-800 text-white">
-    <h2 class="text-4xl font-bold mb-4"><%= t("landing.final_cta.title") %></h2>
-    <p class="text-brand-slate-300 mb-8 max-w-xl mx-auto"><%= t("landing.final_cta.description") %></p>
-    <form class="max-w-md mx-auto flex gap-2">
-      <input
-        type="email"
-        placeholder="Your email"
-        class="
-          flex-1 px-4 py-3 border border-brand-slate-600 bg-brand-slate-700 text-white
-          rounded-lg focus:ring-2 focus:ring-brand-red-500 focus:outline-none
-        "
-      >
-      <button
-        class="
-          bg-brand-red-600 text-white px-8 py-3 rounded-lg font-semibold
-          hover:bg-brand-red-700 transition-colors
-        "
-      >
-        <%= t("landing.final_cta.cta") %>
-      </button>
-    </form>
-    <img src="<%= asset_path('logo-dark.svg') %>" alt="App Logo" class="h-20 mb-8">
-  </section>
+  <%= render("cta") %>
 </div>

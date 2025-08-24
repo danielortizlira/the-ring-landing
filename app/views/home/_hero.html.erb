@@ -1,7 +1,7 @@
 <section
   class="
     relative min-h-screen flex flex-col items-center justify-center text-center px-6
-    bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black
+    bg-background
   "
 >
   <img
@@ -9,28 +9,17 @@
     alt="App Logo"
     class="h-40 mb-8 drop-shadow-md"
   >
-  <h1
-    class="
-      text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900
-      dark:text-white
-    "
-  >
+  <h1 class="text-4xl font-extrabold mb-6 tracking-tight text-secondary-800">
     <%= t("landing.hero.headline") %>
   </h1>
-  <p
-    class="
-      text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed
-    "
-  >
+  <p class=" text-lg text-text-muted mb-8 max-w-2xl leading-relaxed ">
     <%= t("landing.hero.description") %>
   </p>
   <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-    <%# El array se puede definir en el controlador o un helper para mantenerlo limpio %>
     <% ['boxing', 'tabata', 'hiit', 'core', 'jumprope'].each do |tag| %>
       <span
         class="
-          bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-sm
-          font-medium px-4 py-1 rounded-full
+          bg-secondary-100 text-secondary-800 text-sm font-medium px-4 py-1 rounded-full
         "
       >
         <%= t("landing.hero.tags.#{tag}") %>
@@ -39,18 +28,13 @@
   </div>
   <div
     class="
-      bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-lg border border-gray-200
-      dark:border-gray-700 w-full max-w-md
+      bg-surface p-6 rounded-lg shadow-lg border border-border w-full max-w-md
     "
   >
-    <h2
-      class="
-        text-2xl font-bold text-gray-800 dark:text-white mb-2 tracking-widest
-      "
-    >
+    <h2 class=" text-2xl font-bold text-text mb-2 tracking-widest ">
       <%= t("landing.hero.coming_soon_headline") %>
     </h2>
-    <p class="text-gray-600 dark:text-gray-300">
+    <p class="text-text-muted">
       <%= t("landing.hero.coming_soon_description") %>
     </p>
   </div>

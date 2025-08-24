@@ -1,0 +1,62 @@
+<section
+  class="
+    relative min-h-screen text-center overflow-hidden flex flex-col justify-center
+    items-center
+  "
+>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="<%= asset_path('boxing-gym-1.png') %>"
+      <%# Reemplaza con el nombre de tu imagen %>
+      alt="Boxing gym background"
+      class="w-full h-full object-cover"
+    >
+    <div class="absolute inset-0 bg-secondary-900/80"></div>
+  </div>
+
+  <div
+    class="
+      py-24 px-6 relative z-10 flex flex-col justify-center items-center flex-grow
+    "
+  >
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+      <%= t("landing.final_cta.title") %>
+    </h2>
+    <p class="text-secondary-200 mb-8 max-w-xl mx-auto">
+      <%= t("landing.final_cta.description") %>
+    </p>
+
+    <form class="w-full max-w-md flex flex-col sm:flex-row gap-3">
+      <input
+        type="email"
+        placeholder="<%= t('landing.final_cta.placeholder') %>"
+        class="
+          flex-1 px-4 py-3 border-2 border-secondary-600 bg-secondary-700/50 text-white
+          rounded-lg placeholder-secondary-300 focus:ring-2 focus:ring-primary-500
+          focus:border-primary-500 focus:outline-none transition-colors
+        "
+      >
+      <button
+        type="submit"
+        class="
+          bg-primary-600 text-text-contrast px-8 py-3 rounded-lg font-semibold
+          hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2
+          focus:ring-offset-secondary-800 focus:ring-primary-500 transition-colors
+          shadow-lg
+        "
+      >
+        <%= t("landing.final_cta.cta") %>
+      </button>
+    </form>
+  </div>
+
+  <div
+    class="
+      self-stretch flex justify-between items-center bg-secondary-800
+      text-text-contrast gap-2 p-8 z-10
+    "
+  >
+    <p class="text-sm">All Copyright (c) 2025 The Ring. All Rights Reserved.</p>
+    <img src="<%= asset_path('logo-dark.svg') %>" alt="App Logo" class="h-20">
+  </div>
+</section>

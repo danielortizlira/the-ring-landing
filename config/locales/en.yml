@@ -80,6 +80,7 @@ en:
             description: "Track your progress, complete challenges, and keep your streak alive. Turn every workout into a personal victory."
 
     final_cta:
-      title: "Be the first to know"
-      description: "Sign up to get notified when we launch."
-      cta: "Get updates"
+      title: "Ready for Your First Round?"
+      description: "Drop your email and be the first to know when we launch. Get ready to train different."
+      placeholder: "Your email address"
+      cta: "Notify Me"
