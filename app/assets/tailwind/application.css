@@ -59,4 +59,5 @@
 
   /* Fuente */
   --font-sans: "Inter", "Inter var", system-ui, sans-serif;
+  --font-display: "Bebas Neue", var(--font-sans);
 }
