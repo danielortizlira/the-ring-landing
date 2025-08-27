@@ -1,54 +1,70 @@
-<section
-  class="
-    relative min-h-screen flex gap-x-12 gap-y-4 px-6 py-12 bg-background flex-wrap
-    justify-between
-  "
->
-  <div
-    class="
-      flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
-      min-h-screen
-    "
-  >
-    <div class="flex flex-col items-center justify-center text-center">
-      <img src="<%= asset_path('logo.svg') %>" alt="App Logo" class="h-53 mb-12">
-      <h1 class="text-4xl font-extrabold mb-6 tracking-tight text-secondary-800">
-        <%= t("landing.hero.headline") %>
-      </h1>
-      <p class=" text-lg text-text-muted mb-8 max-w-2xl leading-relaxed ">
-        <%= t("landing.hero.description") %>
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-        <% ['boxing', 'tabata', 'hiit', 'core', 'jumprope'].each do |tag| %>
-          <span
-            class="
-              bg-secondary-100 text-secondary-800 text-sm font-medium px-4 py-1 rounded-full
-            "
-          >
-            <%= t("landing.hero.tags.#{tag}") %>
-          </span>
-        <% end %>
-      </div>
+<section class="relative min-h-screen">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0">
+    <div class=" relative h-full w-full">
       <div
         class="
-          bg-surface p-6 rounded-lg shadow-lg border border-border w-full max-w-md
+          absolute bottom-0 right-0 z[-2] h-full w-full bg-gradient-to-b to-bg
+          from-neutral-200
         "
-      >
-        <h2 class=" text-2xl font-bold text-text mb-2 tracking-widest ">
-          <%= t("landing.hero.coming_soon_headline") %>
-        </h2>
-        <p class="text-text-muted">
-          <%= t("landing.hero.coming_soon_description") %>
-        </p>
-      </div>
+      ></div>
+
     </div>
   </div>
+  <!-- Hero Content -->
   <div
     class="
-      flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
-      mb-12
+      relative z-10 min-h-screen flex gap-x-12 gap-y-4 px-6 py-12 flex-wrap
+      justify-between
     "
   >
-    <img src="<%= asset_path('preview.png') %>" alt="App Preview" class="h-200">
+
+    <div
+      class="
+        flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
+        min-h-screen
+      "
+    >
+      <div class="flex flex-col items-center justify-center text-center">
+        <img src="<%= asset_path('logo.svg') %>" alt="App Logo" class="h-53 mb-12">
+        <h1 class="text-4xl font-extrabold mb-6 tracking-tight text-secondary-800">
+          <%= t("landing.hero.headline") %>
+        </h1>
+        <p class=" text-lg text-text-muted mb-8 max-w-2xl leading-relaxed ">
+          <%= t("landing.hero.description") %>
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+          <% ['boxing', 'tabata', 'hiit', 'core', 'jumprope'].each do |tag| %>
+            <span
+              class="
+                bg-secondary-100 text-secondary-800 text-sm font-medium px-4 py-1 rounded-full
+              "
+            >
+              <%= t("landing.hero.tags.#{tag}") %>
+            </span>
+          <% end %>
+        </div>
+        <div
+          class="
+            bg-surface p-6 rounded-lg shadow-lg border border-border w-full max-w-md
+          "
+        >
+          <h2 class=" text-2xl font-bold text-text mb-2 tracking-widest ">
+            <%= t("landing.hero.coming_soon_headline") %>
+          </h2>
+          <p class="text-text-muted">
+            <%= t("landing.hero.coming_soon_description") %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="
+        flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
+        mb-12
+      "
+    >
+      <img src="<%= asset_path('preview.png') %>" alt="App Preview" class="h-200">
+    </div>
   </div>
 </section>
