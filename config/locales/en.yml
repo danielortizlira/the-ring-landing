@@ -47,37 +47,25 @@ en:
       main_title: "Designed for Every Fighting Style"
       main_subtitle: "Whether you're aiming to be a champion or just get in champion shape, we have the perfect plan for you."
 
-      boxers_block:
-        title: "For the Dedicated Boxer"
-        items:
-          technique:
-            title: "Pro-Level Technique"
-            description: "Perfect every punch with drills and exercises designed by expert boxers to refine your technique and precision."
-          endurance:
-            title: "Endurance for Every Round"
-            description: "Build your stamina with cardio and burnout workouts that prepare you to maintain intensity until the final bell."
-          power:
-            title: "Impactful Power"
-            description: "Develop explosive strength in your core and legs with integrated calisthenics, crucial for more devastating punches."
-          plans:
-            title: "Smart Fight Plans"
-            description: "Follow structured programs that target your weaknesses and enhance your strengths for measurable progress."
-
-      fitness_block:
-        title: "For the Fitness Warrior"
-        items:
-          burn:
-            title: "Burn Calories, Release Stress"
-            description: "Get in shape with high-energy Cardio Boxing routines. The most fun and effective way to lose weight and sculpt your body."
-          anywhere:
-            title: "Train Anywhere, On Your Terms"
-            description: "Your boxing gym in your pocket. Access hundreds of workouts from your phone, with or without equipment."
-          strength:
-            title: "Functional Strength & Iron Core"
-            description: "Build a solid foundation with strength exercises that improve your posture, balance, and make you stronger for everyday life."
-          motivation:
-            title: "Motivation That Never Quits"
-            description: "Track your progress, complete challenges, and keep your streak alive. Turn every workout into a personal victory."
+      items:
+        technique:
+          title: "Pro-Level Technique"
+          description: "Perfect every punch with drills and exercises designed by expert boxers to refine your technique and precision."
+        endurance:
+          title: "Endurance for Every Round"
+          description: "Build your stamina with cardio and burnout workouts that prepare you to maintain intensity until the final bell."
+        power:
+          title: "Impactful Power"
+          description: "Develop explosive strength in your core and legs with integrated calisthenics, crucial for more devastating punches."
+        burn:
+          title: "Burn Calories, Release Stress"
+          description: "Get in shape with high-energy Cardio Boxing routines. The most fun and effective way to lose weight and sculpt your body."
+        anywhere:
+          title: "Train Anywhere, On Your Terms"
+          description: "Your boxing gym in your pocket. Access hundreds of workouts from your phone, with or without equipment."
+        strength:
+          title: "Functional Strength & Iron Core"
+          description: "Build a solid foundation with strength exercises that improve your posture, balance, and make you stronger for everyday life."
 
     final_cta:
       title: "Ready for Your First Round?"

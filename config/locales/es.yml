@@ -18,37 +18,25 @@ es:
       main_title: "Diseñado para Cada Estilo de Lucha"
       main_subtitle: "Ya sea que busques ser campeón o simplemente ponerte en forma, tenemos el plan perfecto para ti."
 
-      boxers_block:
-        title: "Para el Boxeador Dedicado"
-        items:
-          technique:
-            title: "Técnica de Nivel Profesional"
-            description: "Perfecciona cada golpe con ejercicios y drills diseñados por boxeadores expertos para refinar tu técnica y precisión."
-          endurance:
-            title: "Resistencia para Cada Round"
-            description: "Aumenta tu aguante con entrenamientos de cardio y descarga que te preparan para mantener la intensidad hasta el campanazo final."
-          power:
-            title: "Potencia que Impacta"
-            description: "Desarrolla fuerza explosiva en tu core y piernas con rutinas de calistenia integradas, cruciales para golpes más contundentes."
-          plans:
-            title: "Planes de Lucha Inteligentes"
-            description: "Sigue programas estructurados que se enfocan en tus debilidades y potencian tus fortalezas para un progreso medible."
-
-      fitness_block:
-        title: "Para el Guerrero del Fitness"
-        items:
-          burn:
-            title: "Quema Calorías, Libera Estrés"
-            description: "Ponte en forma con rutinas de Cardio Boxing de alta energía. La manera más divertida y efectiva de perder peso y esculpir tu cuerpo."
-          anywhere:
-            title: "Entrena Donde Quieras, a Tu Ritmo"
-            description: "Tu gimnasio de boxeo en el bolsillo. Accede a cientos de entrenamientos desde tu teléfono, con o sin equipo."
-          strength:
-            title: "Fuerza Funcional y Core de Acero"
-            description: "Construye una base sólida con ejercicios de fuerza que mejoran tu postura, equilibrio y te hacen más fuerte para tu día a día."
-          motivation:
-            title: "Motivación que no se Rinde"
-            description: "Sigue tu progreso, completa desafíos y mantén tu racha. Convierte cada entrenamiento en una victoria personal."
+      items:
+        technique:
+          title: "Técnica de Nivel Profesional"
+          description: "Perfecciona cada golpe con ejercicios y drills diseñados por boxeadores expertos para refinar tu técnica y precisión."
+        endurance:
+          title: "Resistencia para Cada Round"
+          description: "Aumenta tu aguante con entrenamientos de cardio y descarga que te preparan para mantener la intensidad hasta el campanazo final."
+        power:
+          title: "Potencia que Impacta"
+          description: "Desarrolla fuerza explosiva en tu core y piernas con rutinas de calistenia integradas, cruciales para golpes más contundentes."
+        burn:
+          title: "Quema Calorías, Libera Estrés"
+          description: "Ponte en forma con rutinas de Cardio Boxing de alta energía. La manera más divertida y efectiva de perder peso y esculpir tu cuerpo."
+        anywhere:
+          title: "Entrena Donde Quieras, a Tu Ritmo"
+          description: "Tu gimnasio de boxeo en el bolsillo. Accede a cientos de entrenamientos desde tu teléfono, con o sin equipo."
+        strength:
+          title: "Fuerza Funcional y Core de Acero"
+          description: "Construye una base sólida con ejercicios de fuerza que mejoran tu postura, equilibrio y te hacen más fuerte para tu día a día."
 
     final_cta:
       title: "¿Listo para tu Primer Round?"
