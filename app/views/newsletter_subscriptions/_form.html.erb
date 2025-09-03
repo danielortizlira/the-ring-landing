@@ -1,0 +1,26 @@
+<%= form_with(
+      model: subscription,
+      url: newsletter_subscriptions_path,
+      id: "newsletter_form",
+      class: "w-full max-w-md",
+      data: { controller: "newsletter", action: "turbo:submit-start->newsletter#disableButton turbo:submit-end->newsletter#enableButton" }
+    ) do |f| %>
+
+  <div class="flex flex-col sm:flex-row gap-3">
+    <%= f.email_field :email,
+                  placeholder: t("landing.final_cta.placeholder"),
+                  class:
+                    "grow px-4 py-3 border-2 border-secondary-600 bg-secondary-700/50 text-white rounded-lg placeholder-secondary-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-colors" %>
+
+    <%= f.submit t("landing.final_cta.cta"),
+             class:
+               "bg-primary-600 text-text-contrast px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary-800 focus:ring-primary-500 transition-colors shadow-lg cursor-pointer",
+             data: {
+               newsletter_target: "button",
+             } %>
+  </div>
+
+  <% if subscription.errors[:email].any? %>
+    <p class="text-red-400 text-sm mt-2 text-left"><%= subscription.errors.full_messages_for(:email).first %></p>
+  <% end %>
+<% end %>

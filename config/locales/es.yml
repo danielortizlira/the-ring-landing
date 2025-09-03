@@ -43,3 +43,17 @@ es:
       description: "Deja tu correo y sé el primero en saber cuándo lanzamos. Prepárate para entrenar diferente."
       placeholder: "Tu correo electrónico"
       cta: "Notifíquenme"
+
+  newsletter:
+    success:
+      title: "¡Genial! Ya estás en la lista."
+      description: "Prepárate para recibir noticias. ¡La app llegará pronto!"
+
+  activerecord:
+    errors:
+      models:
+        newsletter_subscription:
+          attributes:
+            email:
+              blank: "no puede estar en blanco. Por favor, ingresa tu correo."
+              taken: "ya ha sido registrado. Intenta con otro correo."

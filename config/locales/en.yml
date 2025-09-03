@@ -72,3 +72,17 @@ en:
       description: "Drop your email and be the first to know when we launch. Get ready to train different."
       placeholder: "Your email address"
       cta: "Notify Me"
+
+  newsletter:
+    success:
+      title: "Awesome! You're on the list."
+      description: "Get ready for updates. The app is coming soon!"
+
+  activerecord:
+    errors:
+      models:
+        newsletter_subscription:
+          attributes:
+            email:
+              blank: "can't be blank. Please enter your email."
+              taken: "has already been subscribed. Try another email."

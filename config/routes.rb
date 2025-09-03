@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+
   scope "(:locale)", locale: /en|es/ do
     root "home#index"
+    resources :newsletter_subscriptions, only: [ :create ]
   end
 end

@@ -7,7 +7,6 @@
   <div class="absolute inset-0 z-0">
     <img
       src="<%= asset_path('boxing-gym.png') %>"
-      <%# Reemplaza con el nombre de tu imagen %>
       alt="Boxing gym background"
       class="w-full h-full object-cover"
     >
@@ -26,28 +25,7 @@
       <%= t("landing.final_cta.description") %>
     </p>
 
-    <form class="w-full max-w-md flex flex-col sm:flex-row gap-3">
-      <input
-        type="email"
-        placeholder="<%= t('landing.final_cta.placeholder') %>"
-        class="
-          flex-1 px-4 py-3 border-2 border-secondary-600 bg-secondary-700/50 text-white
-          rounded-lg placeholder-secondary-300 focus:ring-2 focus:ring-primary-500
-          focus:border-primary-500 focus:outline-none transition-colors
-        "
-      >
-      <button
-        type="submit"
-        class="
-          bg-primary-600 text-text-contrast px-8 py-3 rounded-lg font-semibold
-          hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2
-          focus:ring-offset-secondary-800 focus:ring-primary-500 transition-colors
-          shadow-lg
-        "
-      >
-        <%= t("landing.final_cta.cta") %>
-      </button>
-    </form>
+    <%= render "newsletter_subscriptions/form", subscription: @subscription %>
   </div>
 
   <div
