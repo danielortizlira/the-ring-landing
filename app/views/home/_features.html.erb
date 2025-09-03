@@ -19,7 +19,7 @@
     "
   >
     <div class="text-center mb-16">
-      <h2 class=" text-4xl md:text-5xl font-extrabold text-primary-700 mb-4 ">
+      <h2 class=" text-4xl md:text-5xl font-extrabold text-primary-600 mb-4 ">
         <%= t("landing.features.main_title") %>
       </h2>
       <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
@@ -29,7 +29,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
       <% features.each do |feature_key| %>
-        <%= render "shared/feature_card", key: feature_key, color: "red" %>
+        <%= render "shared/feature_card", key: feature_key %>
       <% end %>
     </div>
   </div>
