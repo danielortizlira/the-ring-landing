@@ -39,16 +39,16 @@ es:
           title: "Fuerza Funcional y Core de Acero"
           description: "Construye una base sólida con ejercicios de fuerza que mejoran tu postura, equilibrio y te hacen más fuerte para tu día a día."
 
-    final_cta:
+    cta:
       title: "¿Listo para tu Primer Round?"
       description: "Deja tu correo y sé el primero en saber cuándo lanzamos. Prepárate para entrenar diferente."
       placeholder: "Tu correo electrónico"
       cta: "Notifíquenme"
 
-  footer:
-    privacy_policy: "Política de Privacidad"
-    terms_and_conditions: "Términos y Condiciones"
-    copyright: Copyright © 2025 The Ring EAS. Todos los derechos reservados.
+      footer:
+        privacy_policy: "Política de Privacidad"
+        terms_and_conditions: "Términos y Condiciones"
+        copyright: Copyright © 2025 The Ring EAS. Todos los derechos reservados.
 
   newsletter:
     success:

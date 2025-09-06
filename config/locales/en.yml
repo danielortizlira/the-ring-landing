@@ -68,16 +68,16 @@ en:
           title: "Functional Strength & Iron Core"
           description: "Build a solid foundation with strength exercises that improve your posture, balance, and make you stronger for everyday life."
 
-    final_cta:
+    cta:
       title: "Ready for Your First Round?"
       description: "Drop your email and be the first to know when we launch. Get ready to train different."
       placeholder: "Your email address"
       cta: "Notify Me"
 
-    footer:
-      privacy_policy: "Privacy Policy"
-      terms_and_conditions: "Terms and Conditions"
-      copyright: Copyright © 2025 The Ring EAS. All Rights Reserved.
+      footer:
+        privacy_policy: "Privacy Policy"
+        terms_and_conditions: "Terms and Conditions"
+        copyright: Copyright © 2025 The Ring EAS. All Rights Reserved.
 
   newsletter:
     success:

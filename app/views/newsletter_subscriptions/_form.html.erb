@@ -8,11 +8,11 @@
 
   <div class="flex flex-col sm:flex-row gap-3">
     <%= f.email_field :email,
-                  placeholder: t("landing.final_cta.placeholder"),
+                  placeholder: t("landing.cta.placeholder"),
                   class:
                     "grow px-4 py-3 border-2 border-secondary-600 bg-secondary-700/50 text-white rounded-lg placeholder-secondary-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-colors" %>
 
-    <%= f.submit t("landing.final_cta.cta"),
+    <%= f.submit t("landing.cta.cta"),
              class:
                "bg-primary-600 text-text-contrast px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary-800 focus:ring-primary-500 transition-colors shadow-lg cursor-pointer",
              data: {
