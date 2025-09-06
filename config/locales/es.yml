@@ -1,4 +1,5 @@
 es:
+  title: "El Ring"
   landing:
     hero:
       headline: " ¿Estás Listo para el Desafío?"
@@ -43,6 +44,11 @@ es:
       description: "Deja tu correo y sé el primero en saber cuándo lanzamos. Prepárate para entrenar diferente."
       placeholder: "Tu correo electrónico"
       cta: "Notifíquenme"
+
+  footer:
+    privacy_policy: "Política de Privacidad"
+    terms_and_conditions: "Términos y Condiciones"
+    copyright: Copyright © 2025 The Ring EAS. Todos los derechos reservados.
 
   newsletter:
     success:

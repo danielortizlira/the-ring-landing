@@ -34,7 +34,22 @@
       flex-col-reverse gap-y-4 md:flex-row md:justify-between
     "
   >
-    <p class="text-sm text-secondary-400">All Copyright (c) 2025 The Ring. All Rights Reserved.</p>
+    <div class="text-sm flex flex-col-reverse md:flex-col gap-y-2">
+      <div
+        class="
+          flex gap-x-2 flex-wrap items-center justify-center md:justify-start
+          transition-colors duration-200 text-underline text-secondary-400
+        "
+      >
+        <%= link_to t("footer.privacy_policy"),
+        privacy_policy_path(locale: I18n.locale),
+        class: "hover:text-primary" %>
+        <%= link_to t("footer.terms_and_conditions"),
+        terms_and_conditions_path(locale: I18n.locale),
+        class: "hover:text-primary" %>
+      </div>
+      <p class="text-secondary-300">All Copyright (c) 2025 The Ring. All Rights Reserved.</p>
+    </div>
     <img src="<%= asset_path('logo-dark.svg') %>" alt="App Logo" class="h-16">
   </div>
 </section>

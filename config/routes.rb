@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|es/ do
     root "home#index"
     resources :newsletter_subscriptions, only: [ :create ]
+
+    get "/privacy_policy", to: "static_pages#privacy_policy"
+    get "/terms_and_conditions", to: "static_pages#terms_and_conditions"
   end
 end

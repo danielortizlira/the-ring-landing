@@ -28,6 +28,7 @@
 #       enabled: "ON"
 
 en:
+  title: The Ring
   landing:
     hero:
       headline: "Are You Ready for the Challenge?"
@@ -72,6 +73,11 @@ en:
       description: "Drop your email and be the first to know when we launch. Get ready to train different."
       placeholder: "Your email address"
       cta: "Notify Me"
+
+    footer:
+      privacy_policy: "Privacy Policy"
+      terms_and_conditions: "Terms and Conditions"
+      copyright: Copyright © 2025 The Ring EAS. All Rights Reserved.
 
   newsletter:
     success:
