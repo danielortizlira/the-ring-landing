@@ -1,4 +1,4 @@
-<section class="relative min-h-screen">
+<section class="relative min-h-screen overflow-hidden" data-controller="parallax">
   <!-- Background Pattern -->
   <div class="absolute inset-0">
     <div class=" relative h-full w-full">
@@ -24,6 +24,7 @@
         flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
         min-h-screen
       "
+      data-parallax-target="content"
     >
       <div class="flex flex-col items-center justify-center text-center">
         <img src="<%= asset_path('logo.svg') %>" alt="App Logo" class="h-53 mb-12">
@@ -63,6 +64,7 @@
         flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
         mb-12
       "
+      data-parallax-target="phone"
     >
       <img src="<%= asset_path('preview.png') %>" alt="App Preview" class="h-200 animate-float">
     </div>
