@@ -84,6 +84,11 @@ en:
       title: "Awesome! You're on the list."
       description: "Get ready for updates. The app is coming soon!"
 
+  account_deletion:
+    confirmation_sent: "Check your email for a confirmation link to complete your request."
+    already_processed: "This deletion request has already been processed."
+    error: "Something went wrong. Please try again or contact support@the-ring.app."
+
   activerecord:
     errors:
       models:

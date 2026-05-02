@@ -1,0 +1,27 @@
+<header class="mb-8 text-center">
+  <h1 class="text-4xl font-bold text-primary">Cuenta Eliminada</h1>
+</header>
+
+<section class="mb-6 text-center">
+  <div class="p-6 bg-green-50 border border-green-200 rounded-lg mb-6">
+    <p class="text-green-800 text-lg font-semibold mb-2">Tu cuenta ha sido eliminada permanentemente.</p>
+    <p class="text-green-700">Se ha enviado un correo de confirmación para tus registros.</p>
+  </div>
+
+  <p class="text-gray-700 mb-6">
+    Todos tus datos — incluyendo el historial de entrenamientos, planes de entrenamiento e información personal —
+    han sido eliminados de nuestros sistemas.
+  </p>
+
+  <p class="text-gray-600 mb-8">
+    Si tienes alguna pregunta, contáctanos en
+    <a href="mailto:support@the-ring.app" class="text-secondary-500 hover:underline">support@the-ring.app</a>.
+  </p>
+
+  <%= link_to "Volver al Inicio", root_path,
+        class: "bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors" %>
+</section>
+
+<footer class="mt-10 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
+  <p>&copy; <%= Time.now.year %> TheRing. Todos los derechos reservados.</p>
+</footer>

@@ -1,0 +1,33 @@
+<header class="mb-8 text-center">
+  <h1 class="text-4xl font-bold text-red-600">Confirmar Eliminación de Cuenta</h1>
+</header>
+
+<section class="mb-8">
+  <div class="p-4 bg-red-50 border border-red-200 rounded-lg mb-6">
+    <p class="text-red-800 font-semibold">Advertencia: Esta acción es permanente y no se puede deshacer.</p>
+  </div>
+  <p class="mb-4 text-gray-700">
+    Estás a punto de eliminar permanentemente tu cuenta de TheRing y todos los datos asociados, incluyendo:
+  </p>
+  <ul class="list-disc list-inside ml-4 mb-6 text-gray-700">
+    <li>Tu cuenta y credenciales de acceso</li>
+    <li>Todo el historial de entrenamientos y progreso</li>
+    <li>Todos los planes de entrenamiento</li>
+    <li>Toda la información personal asociada a tu cuenta</li>
+  </ul>
+  <p class="text-gray-700 mb-6">Una vez eliminados, estos datos no podrán ser recuperados.</p>
+
+  <div class="flex flex-col sm:flex-row gap-4">
+    <%= button_to "Eliminar mi Cuenta",
+          confirm_account_deletion_path(@token),
+          method: :delete,
+          data: { turbo: false },
+          class: "bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors cursor-pointer text-center" %>
+    <%= link_to "Cancelar", root_path,
+          class: "bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors text-center" %>
+  </div>
+</section>
+
+<footer class="mt-10 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
+  <p>&copy; <%= Time.now.year %> TheRing. Todos los derechos reservados.</p>
+</footer>

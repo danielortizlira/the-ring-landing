@@ -19,5 +19,10 @@ Rails.application.routes.draw do
 
     get "/privacy_policy", to: "static_pages#privacy_policy"
     get "/terms_and_conditions", to: "static_pages#terms_and_conditions"
+
+    get    "/delete-account",        to: "account_deletion_requests#new",     as: "delete_account"
+    post   "/delete-account",        to: "account_deletion_requests#create"
+    get    "/delete-account/:token", to: "account_deletion_requests#show",    as: "confirm_account_deletion"
+    delete "/delete-account/:token", to: "account_deletion_requests#destroy"
   end
 end
