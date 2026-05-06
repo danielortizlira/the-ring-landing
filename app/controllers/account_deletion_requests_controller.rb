@@ -1,21 +1,21 @@
 require "net/http"
 
 class AccountDeletionRequestsController < ApplicationController
-  layout "static_page"
+  layout "forms"
 
   def new
     @email = nil
   end
 
   def create
-    response = api_request(:post, "/api/account_deletion_requests.json",
+    response = api_request(:post, "/account_deletion_requests.json",
                            { account_deletion_request: { email: deletion_params[:email] } })
     if success?(response)
       redirect_to delete_account_path, notice: t("account_deletion.confirmation_sent")
     else
       @email = deletion_params[:email]
       flash.now[:alert] = t("account_deletion.error")
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -24,7 +24,7 @@ class AccountDeletionRequestsController < ApplicationController
   end
 
   def destroy
-    response = api_request(:delete, "/api/account_deletion_requests/#{params[:token]}.json")
+    response = api_request(:delete, "/account_deletion_requests/#{params[:token]}.json")
     if success?(response)
       render :success
     elsif already_processed?(response)
@@ -37,11 +37,12 @@ class AccountDeletionRequestsController < ApplicationController
   private
 
   def deletion_params
-    params.require(:account_deletion_request).permit(:email)
+    params.require(:account_deletion_request).permit(:email, :confirm)
   end
 
   def api_request(method, path, body = nil)
     uri = URI("#{ENV["API_BASE_URL"]}#{path}")
+    uri.query = URI.encode_www_form(locale: I18n.locale)
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = uri.scheme == "https"
     req = Net::HTTP.const_get(method.to_s.capitalize).new(uri)
