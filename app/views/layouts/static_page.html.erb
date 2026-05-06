@@ -7,6 +7,9 @@
   <body class="min-h-full text-text-800 bg-gray-200 p-4 md:p-10">
     <main class=" mx-auto max-w-7xl p-8 bg-white shadow-lg rounded-lg ">
       <%= yield %>
+      <footer class="mt-10 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
+        <p><%= t("landing.cta.footer.copyright") %></p>
+      </footer>
     </main>
   </body>
 </html>
