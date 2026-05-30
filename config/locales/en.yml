@@ -87,7 +87,7 @@ en:
   account_deletion:
     confirmation_sent: "Check your email for a confirmation link to complete your request."
     already_processed: "This deletion request has already been processed."
-    error: "Something went wrong. Please try again or contact support@the-ring.app."
+    error: "Something went wrong. Please try again or contact %{support_email}."
 
   activerecord:
     errors:

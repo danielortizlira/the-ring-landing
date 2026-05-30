@@ -1,3 +1,4 @@
+<% _app = app_name; _email = support_email %>
 <header class="mb-8 text-center">
   <h1 class="text-4xl font-bold text-primary">Política de Privacidad</h1>
   <p class="text-gray-500 mt-2">Última Actualización: 1 de junio de 2025</p>
@@ -6,14 +7,14 @@
 <section class="mb-6">
   <h2 class="text-2xl font-semibold text-secondary-500 mb-3">1. Introducción</h2>
   <p class="mb-2">
-    Bienvenido a El Ring ("nosotros", "nos" o "nuestro"). Estamos comprometidos
+    Bienvenido a <%= _app %> ("nosotros", "nos" o "nuestro"). Estamos comprometidos
     a proteger su información personal y su derecho a la privacidad. Si tiene
     alguna pregunta o inquietud sobre este aviso de privacidad, o nuestras
     prácticas con respecto a su información personal, por favor contáctenos en
     <a
-      href="mailto:support@the-ring.app"
+      href="mailto:<%= _email %>"
       class="text-secondary-500 hover:underline"
-    >support@the-ring.app</a>.
+    ><%= _email %></a>.
   </p>
   <p>
     Este aviso de privacidad describe cómo podríamos usar su información si
@@ -29,7 +30,7 @@
   </p>
   <ul class="list-disc list-inside ml-4 my-2">
     <li><strong>"App",</strong>
-      nos referimos a nuestra aplicación móvil, ElRing.</li>
+      nos referimos a nuestra aplicación móvil, <%= _app %>.</li>
     <li><strong>"Servicios",</strong>
       nos referimos a nuestra App y otros servicios relacionados, incluyendo
       ventas, marketing o eventos.</li>
@@ -242,13 +243,13 @@
     Si tiene preguntas o comentarios sobre este aviso, puede enviarnos un
     correo electrónico a
     <a
-      href="mailto:support@the-ring.app"
+      href="mailto:<%= _email %>"
       class="text-secondary-500 hover:underline"
-    >support@the-ring.app</a>
+    ><%= _email %></a>
     o por correo postal a:
   </p>
   <p class="mt-2">
-    El equipo de ElRing<br>
+    El equipo de <%= _app %><br>
     [Su Dirección Postal - Opcional, pero es una buena práctica]<br>
     [Ciudad, Estado, Código Postal]<br>
     [País]

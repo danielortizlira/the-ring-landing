@@ -1,3 +1,4 @@
+<% _app = app_name; _email = support_email %>
 <header class="mb-8 text-center">
   <h1 class="text-4xl font-bold text-primary">Privacy Policy</h1>
   <p class="text-gray-500 mt-2">Last Updated: June 1, 2025</p>
@@ -6,14 +7,14 @@
 <section class="mb-6">
   <h2 class="text-2xl font-semibold text-secondary-500 mb-3">1. Introduction</h2>
   <p class="mb-2">
-    Welcome to El Ring ("we," "us," or "our"). We are committed to protecting
+    Welcome to <%= _app %> ("we," "us," or "our"). We are committed to protecting
     your personal information and your right to privacy. If you have any
     questions or concerns about this privacy notice, or our practices with
     regards to your personal information, please contact us at
     <a
-      href="mailto:support@the-ring.app"
+      href="mailto:<%= _email %>"
       class="text-secondary-500 hover:underline"
-    >support@the-ring.app</a>.
+    ><%= _email %></a>.
   </p>
   <p>
     This privacy notice describes how we might use your information if you:
@@ -28,7 +29,7 @@
   </p>
   <ul class="list-disc list-inside ml-4 my-2">
     <li><strong>"App,"</strong>
-      we are referring to our mobile application, ElRing.</li>
+      we are referring to our mobile application, <%= _app %>.</li>
     <li><strong>"Services,"</strong>
       we are referring to our App, and other related services, including any
       sales, marketing, or events.</li>
@@ -224,13 +225,13 @@
   <p>
     If you have questions or comments about this notice, you may email us at
     <a
-      href="mailto:support@the-ring.app"
+      href="mailto:<%= _email %>"
       class="text-secondary-500 hover:underline"
-    >support@the-ring.app</a>
+    ><%= _email %></a>
     or by post to:
   </p>
   <p class="mt-2">
-    ElRing Team<br>
+    <%= _app %> Team<br>
     [Your Company Address - Optional, but good practice]<br>
     [City, State, Zip Code]<br>
     [Country]

@@ -58,7 +58,7 @@ es:
   account_deletion:
     confirmation_sent: "Revisa tu correo para encontrar el enlace de confirmación y completar tu solicitud."
     already_processed: "Esta solicitud de eliminación ya ha sido procesada."
-    error: "Algo salió mal. Inténtalo de nuevo o contacta a support@the-ring.app."
+    error: "Algo salió mal. Inténtalo de nuevo o contacta a %{support_email}."
 
   activerecord:
     errors:
