@@ -14,7 +14,7 @@ class AccountDeletionRequestsController < ApplicationController
       redirect_to delete_account_path, notice: t("account_deletion.confirmation_sent")
     else
       @email = deletion_params[:email]
-      flash.now[:alert] = t("account_deletion.error", support_email: Brand::SUPPORT_EMAIL)
+      flash.now[:alert] = t("account_deletion.error", support_email: t("support_email"))
       render :new, status: :unprocessable_content
     end
   end
@@ -30,7 +30,7 @@ class AccountDeletionRequestsController < ApplicationController
     elsif already_processed?(response)
       redirect_to delete_account_path, alert: t("account_deletion.already_processed")
     else
-      redirect_to confirm_account_deletion_path(params[:token]), alert: t("account_deletion.error", support_email: Brand::SUPPORT_EMAIL)
+      redirect_to confirm_account_deletion_path(params[:token]), alert: t("account_deletion.error", support_email: t("support_email"))
     end
   end
 

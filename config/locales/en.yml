@@ -28,6 +28,7 @@
 #       enabled: "ON"
 
 en:
+  support_email: "support@elringapp.com"
   title: El Ring
   landing:
     hero:
