@@ -42,10 +42,10 @@
         "
       >
         <%= link_to t("landing.cta.footer.privacy_policy"),
-        privacy_policy_path(locale: I18n.locale),
+        policy_privacy_path,
         class: "hover:text-primary" %>
         <%= link_to t("landing.cta.footer.terms_and_conditions"),
-        terms_and_conditions_path(locale: I18n.locale),
+        policy_terms_path,
         class: "hover:text-primary" %>
       </div>
       <p class="text-secondary-300"><%= t("landing.cta.footer.copyright") %></p>

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     root "home#index"
     resources :newsletter_subscriptions, only: [ :create ]
 
+    # Deprecated - will be removed soon
     get "/privacy_policy", to: "static_pages#privacy_policy"
     get "/terms_and_conditions", to: "static_pages#terms_and_conditions"
 
@@ -25,4 +26,9 @@ Rails.application.routes.draw do
     get    "/delete-account/:token", to: "account_deletion_requests#show",    as: "confirm_account_deletion"
     delete "/delete-account/:token", to: "account_deletion_requests#destroy"
   end
+
+  get "/en/privacy-policy",         to: "static_pages#privacy_policy",       as: :en_privacy_policy,       defaults: { locale: "en" }
+  get "/en/terms-and-conditions",   to: "static_pages#terms_and_conditions", as: :en_terms_and_conditions, defaults: { locale: "en" }
+  get "/es/politica-de-privacidad", to: "static_pages#privacy_policy",       as: :es_privacy_policy,       defaults: { locale: "es" }
+  get "/es/terminos-y-condiciones", to: "static_pages#terms_and_conditions", as: :es_terms_and_conditions, defaults: { locale: "es" }
 end
