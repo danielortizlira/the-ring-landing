@@ -8,7 +8,7 @@
     <main class=" mx-auto max-w-7xl p-8 bg-white shadow-lg rounded-lg ">
       <%= yield %>
       <footer class="mt-10 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
-        <p><%= t("landing.cta.footer.copyright") %></p>
+        <p><%= t("landing.cta.footer.copyright", company_name: company_name) %></p>
       </footer>
     </main>
   </body>

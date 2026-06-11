@@ -49,7 +49,7 @@ es:
       footer:
         privacy_policy: "Política de Privacidad"
         terms_and_conditions: "Términos y Condiciones"
-        copyright: Copyright © 2025 The Ring EAS. Todos los derechos reservados.
+        copyright: "Copyright © 2025 %{company_name}. Todos los derechos reservados."
 
   newsletter:
     success:

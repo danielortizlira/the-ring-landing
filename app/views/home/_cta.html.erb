@@ -48,7 +48,7 @@
         policy_terms_path,
         class: "hover:text-primary" %>
       </div>
-      <p class="text-secondary-300"><%= t("landing.cta.footer.copyright") %></p>
+      <p class="text-secondary-300"><%= t("landing.cta.footer.copyright", company_name: company_name) %></p>
     </div>
     <img src="<%= asset_path('ElRingNegative.svg') %>" alt="<%= app_name %> Logo" class="h-16">
   </div>
