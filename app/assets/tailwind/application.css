@@ -52,19 +52,30 @@
   --color-surface: #ffffff;
   --color-border: #e0e0e0;
 
+  --color-dark-background: #0b0d12;
+  --color-dark-surface: #11151c;
+  --color-dark-surfaceElevated: #161b23;
+
   /* Colores de Texto */
   --color-text: #1c1c1c;
   --color-text-muted: #6f6f6f;
   --color-text-contrast: #ffffff;
 
-  /* Fuente */
-  --font-sans: "Inter", "Inter var", system-ui, sans-serif;
+  --color-dark-border: #21252b;
+  --color-dark-text: #f0f0f0;
+  --color-dark-textMuted: #7e7e7e /* Fuente */ --font-sans: "Inter", "Inter var",
+    system-ui, sans-serif;
   --font-display: "Bebas Neue", var(--font-sans);
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-16px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
 }
 
 .animate-float {

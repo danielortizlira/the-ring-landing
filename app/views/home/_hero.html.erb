@@ -1,16 +1,18 @@
-<section class="relative min-h-screen overflow-hidden" data-controller="parallax">
-  <!-- Background Pattern -->
-  <div class="absolute inset-0">
-    <div class=" relative h-full w-full">
-      <div
-        class="
-          absolute bottom-0 right-0 z[-2] h-full w-full bg-gradient-to-b to-bg
-          from-neutral-200
-        "
-      ></div>
-
-    </div>
+<section class="relative min-h-screen overflow-hidden bg-dark-background" data-controller="parallax">
+  <!-- Ambient red glow -->
+  <div class="pointer-events-none absolute inset-0">
+    <div
+      class="
+        absolute -right-32 top-1/4 h-[36rem] w-[36rem] rounded-full bg-primary-600/20 blur-[120px]
+      "
+    ></div>
+    <div
+      class="
+        absolute -left-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-primary-700/10 blur-[120px]
+      "
+    ></div>
   </div>
+
   <!-- Hero Content -->
   <div
     class="
@@ -18,55 +20,66 @@
       justify-between
     "
   >
+    <div
+      class="
+        relative flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
+        mb-12
+      "
+      data-parallax-target="phone"
+    >
+      <img src="<%= asset_path("preview-#{I18n.locale}.webp") %>" alt="App Preview" class="relative z-10 h-200 animate-float">
+    </div>
 
     <div
       class="
-        flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
+        flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
         min-h-screen
       "
       data-parallax-target="content"
     >
-      <div class="flex flex-col items-center justify-center text-center">
-        <img src="<%= asset_path('ElRing.svg') %>" alt="<%= app_name %> Logo" class="h-53 mb-12">
-        <h1 class="text-4xl font-extrabold mb-6 tracking-tight text-secondary-800">
+      <div class="flex flex-col items-center justify-center text-center min-[1172px]:items-start min-[1172px]:text-left">
+        <img src="<%= asset_path('ElRing.svg') %>" alt="<%= app_name %> Logo" class="h-40 mb-10">
+
+        <h1 class="font-display uppercase tracking-tight leading-none text-5xl md:text-6xl text-dark-text">
           <%= t("landing.hero.headline") %>
         </h1>
-        <p class=" text-lg text-text-muted mb-8 max-w-2xl leading-relaxed ">
+
+        <div class="mt-6 h-1 w-16 bg-primary-600"></div>
+
+        <p class="mt-6 text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
           <%= t("landing.hero.description") %>
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+
+        <div class="flex flex-wrap items-center justify-center min-[1172px]:justify-start gap-2 mb-10">
           <% ['boxing', 'tabata', 'hiit', 'core', 'jumprope'].each do |tag| %>
             <span
               class="
-                bg-secondary-100 text-secondary-800 text-sm font-medium px-4 py-1 rounded-full
+                border border-dark-border text-dark-text text-sm font-medium px-4 py-1 rounded-full
               "
             >
               <%= t("landing.hero.tags.#{tag}") %>
             </span>
           <% end %>
         </div>
-        <div
-          class="
-            bg-surface p-6 rounded-lg shadow-lg border border-border w-full max-w-md
-          "
-        >
-          <h2 class=" text-2xl font-bold text-text mb-2 tracking-widest ">
+
+        <div class="flex flex-col items-center min-[1172px]:items-start gap-4">
+          <span
+            class="
+              inline-flex items-center gap-2 rounded-full bg-primary-600 px-4 py-1.5
+              text-sm font-semibold uppercase tracking-widest text-white
+            "
+          >
             <%= t("landing.hero.coming_soon_headline") %>
-          </h2>
-          <p class="text-text-muted">
+          </span>
+          <p class="text-gray-400">
             <%= t("landing.hero.coming_soon_description") %>
           </p>
+          <div class="flex flex-wrap items-center justify-center min-[1172px]:justify-start gap-3">
+            <%= app_store_pre_order_badge_tag %>
+            <%= google_play_pre_register_badge_tag %>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="
-        flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
-        mb-12
-      "
-      data-parallax-target="phone"
-    >
-      <img src="<%= asset_path("preview-#{I18n.locale}.webp") %>" alt="App Preview" class="h-200 animate-float">
     </div>
   </div>
 </section>
