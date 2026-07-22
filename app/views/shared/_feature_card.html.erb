@@ -1,27 +1,33 @@
+<% first, rest = t("landing.features.items.#{key}.title").split(" ", 2) %>
+
 <div
   class="
-    group relative flex h-72 cursor-pointer flex-col justify-end overflow-hidden
-    rounded-lg shadow-lg transition-transform hover:scale-105
+    relative flex min-h-[320px] items-center overflow-hidden rounded-2xl bg-black shadow-lg
   "
 >
+  <!-- Background image -->
   <img
-    src="<%= asset_path(key + '.jpg') %>"
+    src="<%= asset_path(key + '.webp') %>"
     alt="<%= t("landing.features.items.#{key}.title") %>"
     class="absolute inset-0 h-full w-full object-cover"
   />
 
-  <div
-    class="
-      absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-colors
-      group-hover:from-black/90
-    "
-  ></div>
+  <!-- Legibility overlay, darkest on the text side -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
 
-  <div class="relative z-10 p-6 text-white">
-    <h4 class="text-lg font-bold">
-      <%= t("landing.features.items.#{key}.title") %>
-    </h4>
-    <p class="mt-1 text-gray-200">
+  <!-- Text overlay -->
+  <div class="relative z-10 w-1/2 p-6 md:p-10">
+    <h3 class="font-display uppercase leading-none tracking-tight text-2xl md:text-4xl">
+      <span class="text-primary-600"><%= first %></span>
+      <% if rest.present? %>
+        <br />
+        <span class="text-white"><%= rest %></span>
+      <% end %>
+    </h3>
+
+    <div class="mt-4 h-1 w-12 bg-primary-600"></div>
+
+    <p class="mt-4 text-sm text-secondary-300 md:text-base">
       <%= t("landing.features.items.#{key}.description") %>
     </p>
   </div>

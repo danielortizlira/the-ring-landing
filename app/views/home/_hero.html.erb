@@ -16,35 +16,36 @@
   <!-- Hero Content -->
   <div
     class="
-      relative z-10 min-h-screen flex gap-x-12 gap-y-4 px-6 py-12 flex-wrap
-      justify-between
+      relative z-10 min-h-screen flex flex-col-reverse items-center justify-center gap-y-16
+      px-6 pt-28 pb-16
+      min-[1172px]:flex-row min-[1172px]:items-center min-[1172px]:justify-between
+      min-[1172px]:gap-x-12 min-[1172px]:gap-y-4 min-[1172px]:py-12
     "
   >
     <div
       class="
         relative flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
-        mb-12
       "
       data-parallax-target="phone"
     >
-      <img src="<%= asset_path("preview-#{I18n.locale}.webp") %>" alt="App Preview" class="relative z-10 h-200 animate-float">
+      <img src="<%= asset_path("preview-#{I18n.locale}.webp") %>" alt="App Preview" class="relative z-10 h-[32rem] sm:h-[40rem] lg:h-[48rem] min-[1172px]:h-200 animate-float">
     </div>
 
     <div
       class="
         flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
-        min-h-screen
+        min-[1172px]:min-h-screen
       "
       data-parallax-target="content"
     >
       <div class="flex flex-col items-center justify-center text-center min-[1172px]:items-start min-[1172px]:text-left">
-        <img src="<%= asset_path('ElRing.svg') %>" alt="<%= app_name %> Logo" class="h-40 mb-10">
+        <img src="<%= asset_path('ElRingNegative.svg') %>" alt="<%= app_name %> Logo" class="h-32 sm:h-40 min-[1172px]:h-52 mb-8">
 
-        <h1 class="font-display uppercase tracking-tight leading-none text-5xl md:text-6xl text-dark-text">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-dark-text">
           <%= t("landing.hero.headline") %>
         </h1>
 
-        <div class="mt-6 h-1 w-16 bg-primary-600"></div>
+        <div class="mt-5 h-1 w-16 bg-primary-600"></div>
 
         <p class="mt-6 text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
           <%= t("landing.hero.description") %>
@@ -74,10 +75,6 @@
           <p class="text-gray-400">
             <%= t("landing.hero.coming_soon_description") %>
           </p>
-          <div class="flex flex-wrap items-center justify-center min-[1172px]:justify-start gap-3">
-            <%= app_store_pre_order_badge_tag %>
-            <%= google_play_pre_register_badge_tag %>
-          </div>
         </div>
       </div>
     </div>
