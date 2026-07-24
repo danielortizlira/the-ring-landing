@@ -41,6 +41,7 @@ const HOLE = { top: 4.6, bottom: 5, left: 2.6, right: 2.7, rH: 7, rV: 3.2 };
 export default class extends Controller {
   static targets = [
     "track", "phone", "screen", "frame", "heroScreen", "featuresScreen", "list", "card", "cta",
+    "floater",
   ];
 
   connect() {
@@ -56,15 +57,28 @@ export default class extends Controller {
   disconnect() {
     window.removeEventListener("scroll", this.onScroll);
     window.removeEventListener("resize", this.onResize);
+    clearTimeout(this.idleTimer);
   }
 
   requestUpdate() {
+    this.pauseFloatWhileScrolling();
     if (this.ticking) return;
     this.ticking = true;
     requestAnimationFrame(() => {
       this.update();
       this.ticking = false;
     });
+  }
+
+  // The phone floats (idle bob) only when the page isn't being scrolled: pause
+  // the animation on scroll and resume it a moment after scrolling stops.
+  pauseFloatWhileScrolling() {
+    if (!this.hasFloaterTarget) return;
+    this.floaterTarget.style.animationPlayState = "paused";
+    clearTimeout(this.idleTimer);
+    this.idleTimer = setTimeout(() => {
+      if (this.hasFloaterTarget) this.floaterTarget.style.animationPlayState = "running";
+    }, 200);
   }
 
   update() {

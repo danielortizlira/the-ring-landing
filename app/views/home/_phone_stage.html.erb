@@ -13,12 +13,19 @@
         ></div>
       </div>
 
+      <!-- Idle float wrapper: bobs the phone up/down when not scrolling.
+           (Separate element so its translateY doesn't clash with the phone's
+           JS-driven scale/grow transform.) -->
+      <div
+        data-phone-stage-target="floater"
+        class="relative z-10 animate-float motion-reduce:animate-none"
+      >
       <!-- Phone: a real device frame image (phone_frame.png) with the screen cut
            out; the app content sits behind it and shows through the hole. -->
       <div
         data-phone-stage-target="phone"
         class="
-          relative z-10 origin-center will-change-transform aspect-[1141/2348]
+          relative origin-center will-change-transform aspect-[1141/2348]
           h-[92svh] min-[500px]:h-[88vh] min-[500px]:max-h-[880px]
         "
       >
@@ -140,6 +147,8 @@
               class: "pointer-events-none absolute inset-0 h-full w-full select-none" %>
       </div>
       <!-- /phone -->
+      </div>
+      <!-- /floater -->
     </div>
   </div>
 </section>
