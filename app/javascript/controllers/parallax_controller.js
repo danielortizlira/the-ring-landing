@@ -1,63 +1,63 @@
 import { Controller } from "@hotwired/stimulus";
 
-// Hero scroll effect: both layers drift upward (along the scroll axis) at
-// different speeds to create depth, and fade out as the hero hands off to the
-// section below. The phone moves slower (it sits "behind"); the text moves and
-// fades a touch faster (it sits "in front"). Transforms are applied to the
-// wrapper elements, so the phone's idle float animation on the inner <img> is
-// left untouched.
+// Hero reveal effect: each target slides in from the side it "came from" (phone
+// from the left, text from the right) and fades in when it enters the viewport,
+// and slides back out that same way when it leaves. Visibility is decided
+// per-element via IntersectionObserver, so it works in the stacked mobile layout
+// too. The transform is applied to the wrapper <div>, leaving the phone's idle
+// float animation on the inner <img> untouched.
+const OFFSET = 180; // px the element is offset in its origin direction while hidden
+
 export default class extends Controller {
   static targets = ["phone", "content"];
 
   connect() {
-    this.ticking = false;
-    this.onScroll = this.requestUpdate.bind(this);
-    window.addEventListener("scroll", this.onScroll, { passive: true });
-    this.update();
+    // Respect reduced-motion: leave everything at its natural, visible position.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Negative top/bottom rootMargin shrinks the viewport the observer cares
+    // about, so an element counts as "gone" while it's still ~25% on screen —
+    // that's what makes the slide-out actually visible before it scrolls off.
+    this.observer = new IntersectionObserver(this.onIntersect.bind(this), {
+      threshold: 0,
+      rootMargin: "-25% 0px -25% 0px",
+    });
+
+    for (const target of this.revealTargets) {
+      this.hide(target);
+      this.observer.observe(target);
+    }
   }
 
   disconnect() {
-    window.removeEventListener("scroll", this.onScroll);
+    if (this.observer) this.observer.disconnect();
   }
 
-  requestUpdate() {
-    if (this.ticking) return;
-    this.ticking = true;
-    requestAnimationFrame(() => {
-      this.update();
-      this.ticking = false;
-    });
-  }
-
-  update() {
-    // Only run the effect on the side-by-side desktop layout. On the stacked
-    // mobile layout it looks off, so leave the elements static there.
-    if (window.innerWidth < 1172) {
-      this.reset();
-      return;
-    }
-
-    const y = window.scrollY;
-    const vh = window.innerHeight || 800;
-
-    if (this.hasPhoneTarget) {
-      this.phoneTarget.style.transform = `translateY(${-y * 0.15}px)`;
-      this.phoneTarget.style.opacity = Math.max(0, 1 - y / (vh * 0.85));
-    }
-
-    if (this.hasContentTarget) {
-      this.contentTarget.style.transform = `translateY(${-y * 0.4}px)`;
-      this.contentTarget.style.opacity = Math.max(0, 1 - y / (vh * 0.6));
-    }
-  }
-
-  reset() {
+  get revealTargets() {
     const targets = [];
     if (this.hasPhoneTarget) targets.push(this.phoneTarget);
     if (this.hasContentTarget) targets.push(this.contentTarget);
-    for (const target of targets) {
-      target.style.transform = "";
-      target.style.opacity = "";
+    return targets;
+  }
+
+  onIntersect(entries) {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        this.show(entry.target);
+      } else {
+        this.hide(entry.target);
+      }
     }
+  }
+
+  hide(el) {
+    const dx = el.dataset.parallaxFrom === "left" ? -OFFSET : OFFSET;
+    el.style.opacity = "0";
+    el.style.transform = `translateX(${dx}px)`;
+  }
+
+  show(el) {
+    el.style.opacity = "1";
+    el.style.transform = "translateX(0)";
   }
 }

@@ -1,22 +1,8 @@
 <section class="relative min-h-screen overflow-hidden bg-dark-background" data-controller="parallax">
-  <!-- Ambient red glow -->
-  <div class="pointer-events-none absolute inset-0">
-    <div
-      class="
-        absolute -right-32 top-1/4 h-[36rem] w-[36rem] rounded-full bg-primary-600/20 blur-[120px]
-      "
-    ></div>
-    <div
-      class="
-        absolute -left-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-primary-700/10 blur-[120px]
-      "
-    ></div>
-  </div>
-
   <!-- Hero Content -->
   <div
     class="
-      relative z-10 min-h-screen flex flex-col-reverse items-center justify-center gap-y-16
+      relative z-10 min-h-screen flex flex-col-reverse items-center justify-center gap-y-24
       px-6 pt-28 pb-16
       min-[1172px]:flex-row min-[1172px]:items-center min-[1172px]:justify-between
       min-[1172px]:gap-x-12 min-[1172px]:gap-y-4 min-[1172px]:py-12
@@ -25,8 +11,10 @@
     <div
       class="
         relative flex flex-col flex-grow items-center min-[1172px]:items-end justify-center
+        transition duration-700 ease-out will-change-transform
       "
       data-parallax-target="phone"
+      data-parallax-from="left"
     >
       <img src="<%= asset_path("preview-#{I18n.locale}.webp") %>" alt="App Preview" class="relative z-10 h-[32rem] sm:h-[40rem] lg:h-[48rem] min-[1172px]:h-200 animate-float">
     </div>
@@ -35,8 +23,10 @@
       class="
         flex flex-col flex-grow items-center min-[1172px]:items-start justify-center
         min-[1172px]:min-h-screen
+        transition duration-700 ease-out will-change-transform
       "
       data-parallax-target="content"
+      data-parallax-from="right"
     >
       <div class="flex flex-col items-center justify-center text-center min-[1172px]:items-start min-[1172px]:text-left">
         <img src="<%= asset_path('ElRingNegative.svg') %>" alt="<%= app_name %> Logo" class="h-32 sm:h-40 min-[1172px]:h-52 mb-8">
@@ -50,18 +40,6 @@
         <p class="mt-6 text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
           <%= t("landing.hero.description") %>
         </p>
-
-        <div class="flex flex-wrap items-center justify-center min-[1172px]:justify-start gap-2 mb-10">
-          <% ['boxing', 'tabata', 'hiit', 'core', 'jumprope'].each do |tag| %>
-            <span
-              class="
-                border border-dark-border text-dark-text text-sm font-medium px-4 py-1 rounded-full
-              "
-            >
-              <%= t("landing.hero.tags.#{tag}") %>
-            </span>
-          <% end %>
-        </div>
 
         <div class="flex flex-col items-center min-[1172px]:items-start gap-4">
           <span

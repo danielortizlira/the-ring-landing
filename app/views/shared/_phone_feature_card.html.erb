@@ -1,0 +1,33 @@
+<% first, rest = t("landing.features.items.#{key}.title").split(" ", 2) %>
+
+<div
+  class="relative h-64 shrink-0 overflow-hidden rounded-2xl bg-black shadow-lg ring-2 ring-white/10 will-change-transform"
+  data-phone-stage-target="card"
+  data-from="<%= from %>"
+>
+  <img
+    src="<%= asset_path(key + '.webp') %>"
+    alt="<%= t("landing.features.items.#{key}.title") %>"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+
+  <!-- Legibility overlay, darkest on the left where the text sits -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+
+  <!-- Text overlay, on the left -->
+  <div class="relative z-10 flex h-full w-3/4 flex-col justify-center p-6">
+    <h3 class="font-display uppercase leading-none tracking-tight text-2xl">
+      <span class="text-primary-600"><%= first %></span>
+      <% if rest.present? %>
+        <br />
+        <span class="text-white"><%= rest %></span>
+      <% end %>
+    </h3>
+
+    <div class="my-2 h-1 w-12 bg-primary-600"></div>
+
+    <p class="text-sm leading-relaxed text-dark-text-muted">
+      <%= t("landing.features.items.#{key}.description") %>
+    </p>
+  </div>
+</div>

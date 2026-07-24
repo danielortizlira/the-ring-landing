@@ -63,8 +63,10 @@
 
   --color-dark-border: #21252b;
   --color-dark-text: #f0f0f0;
-  --color-dark-textMuted: #7e7e7e /* Fuente */ --font-sans: "Inter", "Inter var",
-    system-ui, sans-serif;
+  --color-dark-text-muted: #7e7e7e;
+
+  /* Fuente */
+  --font-sans: "Inter", "Inter var", system-ui, sans-serif;
   --font-display: "Bebas Neue", var(--font-sans);
 }
 
