@@ -48,10 +48,16 @@ export default class extends Controller {
     this.reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.ticking = false;
     this.onScroll = this.requestUpdate.bind(this);
-    this.onResize = this.update.bind(this);
+    this.onResize = this.handleResize.bind(this);
     window.addEventListener("scroll", this.onScroll, { passive: true });
     window.addEventListener("resize", this.onResize);
     this.update();
+    this.setFloat(this.isDesktop() ? "running" : "off");
+  }
+
+  handleResize() {
+    this.update();
+    this.setFloat(this.isDesktop() ? "running" : "off");
   }
 
   disconnect() {
@@ -70,14 +76,31 @@ export default class extends Controller {
     });
   }
 
-  // The phone floats (idle bob) only when the page isn't being scrolled: pause
-  // the animation on scroll and resume it a moment after scrolling stops.
-  pauseFloatWhileScrolling() {
+  isDesktop() {
+    return window.matchMedia(DESKTOP_QUERY).matches;
+  }
+
+  // Idle float runs only on the framed (tablet/desktop) layout; on the
+  // fullscreen mobile layout it's off entirely, since bobbing would shift the
+  // whole screen. Modes: "running" | "paused" | "off".
+  setFloat(mode) {
     if (!this.hasFloaterTarget) return;
-    this.floaterTarget.style.animationPlayState = "paused";
+    const style = this.floaterTarget.style;
+    if (this.reduced || mode === "off") {
+      style.animation = "none";
+      return;
+    }
+    style.animation = "";
+    style.animationPlayState = mode;
+  }
+
+  // The phone floats (idle bob) only when the page isn't being scrolled: pause
+  // on scroll, resume a moment after scrolling stops — and never on mobile.
+  pauseFloatWhileScrolling() {
+    this.setFloat(this.isDesktop() ? "paused" : "off");
     clearTimeout(this.idleTimer);
     this.idleTimer = setTimeout(() => {
-      if (this.hasFloaterTarget) this.floaterTarget.style.animationPlayState = "running";
+      this.setFloat(this.isDesktop() ? "running" : "off");
     }, 200);
   }
 
