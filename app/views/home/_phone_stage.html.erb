@@ -1,17 +1,13 @@
-<section data-controller="phone-stage" class="relative bg-dark-background">
+<section
+  data-controller="phone-stage"
+  class="relative bg-dark-background bg-cover bg-center bg-fixed bg-no-repeat"
+  style="background-image: url('<%= asset_path('landing-page-bg.webp') %>');"
+>
   <!-- Tall scroll track drives the sequence -->
   <div data-phone-stage-target="track" class="relative h-[600vh]">
     <!-- Sticky viewport: phone stays centered while the track scrolls past -->
     <div class="sticky top-0 flex h-[100dvh] items-center justify-center overflow-hidden">
-      <!-- Ambient red glow -->
-      <div class="pointer-events-none absolute inset-0">
-        <div
-          class="
-            absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2
-            rounded-full bg-primary-600/15 blur-[120px]
-          "
-        ></div>
-      </div>
+      
 
       <!-- Idle float wrapper: bobs the phone up/down when not scrolling.
            (Separate element so its translateY doesn't clash with the phone's
@@ -36,7 +32,7 @@
         <div
           data-phone-stage-target="screen"
           class="absolute overflow-hidden bg-black"
-          style="top:4.6%;bottom:5%;left:2.6%;right:2.7%;border-radius:7%/3.2%;container-type:inline-size;"
+          style="top:1.5%;bottom:1.6%;left:2.6%;right:2.7%;border-radius:7%/3.2%;container-type:inline-size;"
         >
 
           <!-- ============ Screen 0: Hero ============ -->
@@ -145,7 +141,7 @@
 
         <!-- Device frame on top (screen area is transparent); fades out on mobile
              as the screen grows to fullscreen. -->
-        <%= image_tag "phone_frame.png", alt: "", aria: { hidden: true },
+        <%= image_tag "navy_phone_frame.webp", alt: "", aria: { hidden: true },
               data: { "phone-stage-target": "frame" },
               class: "pointer-events-none absolute inset-0 h-full w-full select-none" %>
       </div>

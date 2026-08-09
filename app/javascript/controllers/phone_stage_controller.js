@@ -36,7 +36,7 @@ const REVEAL_SPAN = 0.4; // viewport heights over which a card fully reveals
 const SLIDE = 80; // % of card width a card is offset while hidden
 
 // Screen hole geometry (percent) — matches the inline style in the view.
-const HOLE = { top: 4.6, bottom: 5, left: 2.6, right: 2.7, rH: 7, rV: 3.2 };
+const HOLE = { top: 1.5, bottom: 1.6, left: 2.6, right: 2.7, rH: 7, rV: 3.2 };
 
 export default class extends Controller {
   static targets = [
